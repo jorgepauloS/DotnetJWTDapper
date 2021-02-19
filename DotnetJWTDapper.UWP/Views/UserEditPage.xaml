@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="DotnetJWTDapper.UWP.Views.UserEditPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DotnetJWTDapper.UWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox Text="{x:Bind ViewModel.SelectedUser.Id, Mode=OneWay}" IsEnabled="False" />
+        <TextBox PlaceholderText="Change Name" Text="{x:Bind ViewModel.SelectedUser.Name, Mode=TwoWay}" />
+        <TextBox PlaceholderText="Change Username" Text="{x:Bind ViewModel.SelectedUser.Username, Mode=TwoWay}" />
+        <TextBox PlaceholderText="Change Email" Text="{x:Bind ViewModel.SelectedUser.Email, Mode=TwoWay}" />
+        <PasswordBox PlaceholderText="Change Password" Password="{x:Bind ViewModel.SelectedUser.Password, Mode=TwoWay}" />
+        <Button Margin="5, 50, 5, 5" Content="Back" HorizontalAlignment="Center" Click="Back_Click"></Button>
+        <Button x:Name="Save" HorizontalAlignment="Center" Content="Save" Click="Save_Click" />
+    </StackPanel>
+</Page>
